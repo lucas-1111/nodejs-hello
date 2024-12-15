@@ -32,6 +32,8 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
 
+  "postCreateCommand": "rm -rf node_modules && npm install",
+
 	// Configure tool-specific properties.
 	// "customizations": {},
 
@@ -69,19 +71,22 @@
   //
   // Windows mount
   //
-    "mounts": [
+/*
+  "mounts": [
     {
       "source": "${localEnv:USERPROFILE}\\.aws",
       "target": "/home/codespace/.aws",
       "type": "bind"
     },
   ],
-  
+*/  
+ 
 "customizations": {
     "vscode": {
       "extensions": ["streetsidesoftware.code-spell-checker"]
     }
   },
+
   "forwardPorts": [3000]
 
 }
